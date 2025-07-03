@@ -1,38 +1,13 @@
-# sv
+## ℹ️ About this project
+This is a simple URL shortener made with SvelteKit. Free, easy, and hassle-free.
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## 🧰 Tech stack
+![Tech Stack](https://skillicons.dev/icons?i=nodejs,ts,svelte,prisma,postgresql)
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## 💡 Future upgrades
+- Better README.md
+- Loading state
+- Better validation
+- Better responsiveness
+- User authentication system
+- Admin and user dashboard
