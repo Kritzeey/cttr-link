@@ -1,5 +1,5 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 body {
-	background: var(--color-purple-400);
+  background: var(--color-purple-400);
 }
