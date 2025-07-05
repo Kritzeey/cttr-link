@@ -3,16 +3,24 @@ import { fail, type Actions } from "@sveltejs/kit";
 import { z } from "zod/v4";
 
 const schema = z.object({
-  shortUrl: z.string().trim().min(1, "Please fill in this field"),
-  longUrl: z.string().trim().min(1, "Please fill in this field"),
+  shortUrl: z
+    .string()
+    .min(1, "Please fill in this field")
+    .regex(/^\S+$/, "URLs cannot contain whitespaces"),
+  longUrl: z
+    .string()
+    .regex(/^\S+$/, "URLs cannot contain whitespaces")
+    .min(1, "Please fill in this field"),
 });
 
 const normalizeUrl = (url: string) => {
-  if (url.startsWith("http://") || url.startsWith("https://")) {
-    return url;
+  const trimmedUrl = url.trim();
+
+  if (trimmedUrl.startsWith("http://") || trimmedUrl.startsWith("https://")) {
+    return trimmedUrl;
   }
 
-  return `http://${url}`;
+  return `http://${trimmedUrl}`;
 };
 
 export const actions: Actions = {
